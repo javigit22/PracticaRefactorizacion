@@ -1,13 +1,12 @@
-
 package RecRefactor;
 
 import java.util.Random;
 
 public class A {
 
-    static int m = 4; 
-    static int n = 4; 
-    
+    static int m = 4;
+    static int n = 4;
+
     static void crearMatriz(int[][] c, int n) {
 
         Random r = new Random();
@@ -22,91 +21,83 @@ public class A {
         }
 
     }
-    
-    static void printMatriz(int[][] c, int n) 
-    { 
-        for (int i = 0; i < n; i++) { 
-            for (int j = 0; j < n; j++) {
-                System.out.print(c[i][j] + " "); 
-            }
-            System.out.println(); 
-        } 
-    } 
-    
-    static void ordenarMenorMayor(int[][] a, int n) 
-    { 
-         
-        int[] t = new int[n * n]; 
-        int k = 0; 
-      
-    
+
+    static void printMatriz(int[][] c, int n) {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                t[k++] = a[i][j]; 
+                System.out.print(c[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    static void ordenarMenorMayor(int[][] a, int n) {
+
+        int[] t = new int[n * n];
+        int k = 0;
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                t[k++] = a[i][j];
             }
         }
-      
-        
+
         int m = t.length;
-        for( int i=0; i < n; i++){
-            for( int j=0;j< n; j++){
-                for(int x=0; x < n; x++){
-                    for(int y=0; y < n; y++){
-                        if(a[i][j] < a[x][y]){
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                for (int x = 0; x < n; x++) {
+                    for (int y = 0; y < n; y++) {
+                        if (a[i][j] < a[x][y]) {
                             int q = a[i][j];
                             a[i][j] = a[x][y];
                             a[x][y] = q;
                         }
                     }
                 }
-            } 
-        }       
+            }
+        }
     }
-    
+
     public static void main(String[] args) {
-        
+
         int[][] c = new int[m][n];
-        crearMatriz(c, 4); 
-        
-     int i,j;
-        
+        crearMatriz(c, 4);
+
+        int i, j;
+
         printMatriz(c, 4);
         System.out.println("---");
         ordenarMenorMayor(c, 4);
         System.out.println("---");
         printMatriz(c, 4);
-        int rs = 0; 
-        
-        for (i = 0; i < 4; ++i) { 
-        for (j = 0; j < 4; ++j) { 
-  
-            rs = rs + c[i][j]; 
-        } 
-  
-        System.out.println("rs "
-            + i + " = " + rs); 
-          
-        rs = 0; 
-        
+        int rs = 0;
+
+        for (i = 0; i < 4; ++i) {
+            for (j = 0; j < 4; ++j) {
+
+                rs = rs + c[i][j];
+            }
+
+            System.out.println("rs "
+                    + i + " = " + rs);
+
+            rs = 0;
+
         }
-        
-        int cs = 0; 
-  
-   
-  
-    for (i = 0; i < 4; ++i) { 
-        for (j = 0; j < 4; ++j) { 
-  
-            cs = cs + c[j][i]; 
-        } 
-  
-        System.out.println("cs "
-            + i + " = " + cs); 
-  
-        cs = 0; 
-    } 
-    } 
-        
-    
-    
+
+        int cs = 0;
+
+        for (i = 0; i < 4; ++i) {
+            for (j = 0; j < 4; ++j) {
+
+                cs = cs + c[j][i];
+            }
+
+            System.out.println("cs "
+                    + i + " = " + cs);
+
+            cs = 0;
+        }
+    }
+
 }
