@@ -12,9 +12,11 @@ public class B {
         int k = 0; 
       
     
-        for (int i = 0; i < n; i++) 
-            for (int j = 0; j < n; j++) 
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
                 t[k++] = a[i][j]; 
+            }
+        }
       
         
         int m = t.length;
