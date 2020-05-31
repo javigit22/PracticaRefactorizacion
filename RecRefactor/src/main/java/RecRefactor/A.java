@@ -17,7 +17,6 @@ public class A {
      int i,j;
      
     
-    int x = 1; 
     for (i = 0; i < m; i++) 
         for (j = 0; j < n; j++) 
             a[i][j] = r.nextInt(100);
