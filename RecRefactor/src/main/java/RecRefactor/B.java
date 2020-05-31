@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class B {
     
-    static void doB(int[][] a, int n) 
+    static void ordenarMenorMayor(int[][] a, int n) 
     { 
          
         int[] t = new int[n * n]; 
