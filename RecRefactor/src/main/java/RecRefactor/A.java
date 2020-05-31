@@ -8,6 +8,21 @@ public class A {
     static int m = 4; 
     static int n = 4; 
     
+    static void crearMatriz(int[][] c, int n) {
+
+        Random r = new Random();
+
+        int i, j;
+
+        int x = 1;
+        for (i = 0; i < m; i++) {
+            for (j = 0; j < n; j++) {
+                c[i][j] = r.nextInt(100);
+            }
+        }
+
+    }
+    
     static void printMatriz(int[][] c, int n) 
     { 
         for (int i = 0; i < n; i++) { 
@@ -50,31 +65,22 @@ public class A {
     
     public static void main(String[] args) {
         
+        int[][] c = new int[m][n];
+        crearMatriz(c, 4); 
         
-         Random r = new Random();
-         
-        int [][]a = new int[m][n]; 
      int i,j;
-     
-    
-    for (i = 0; i < m; i++) 
-        for (j = 0; j < n; j++) 
-            a[i][j] = r.nextInt(100);
         
-        
-        C.doC(a, 4);
+        printMatriz(c, 4);
         System.out.println("---");
-        B.doB(a, 4);
+        ordenarMenorMayor(c, 4);
         System.out.println("---");
-        C.doC(a, 4);
+        printMatriz(c, 4);
         int rs = 0; 
         
-        
-  
         for (i = 0; i < 4; ++i) { 
         for (j = 0; j < 4; ++j) { 
   
-            rs = rs + a[i][j]; 
+            rs = rs + c[i][j]; 
         } 
   
         System.out.println("rs "
@@ -91,7 +97,7 @@ public class A {
     for (i = 0; i < 4; ++i) { 
         for (j = 0; j < 4; ++j) { 
   
-            cs = cs + a[j][i]; 
+            cs = cs + c[j][i]; 
         } 
   
         System.out.println("cs "
