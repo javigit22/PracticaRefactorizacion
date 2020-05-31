@@ -2,11 +2,24 @@ package RecRefactor;
 
 import java.util.Random;
 
+/**
+ * @author javic
+ * 
+ * Este tipo de comentarios de documentación
+ * no tendrían sentido dentro de la doctrina Clean Code
+ * salvo que estemos desarrollando código para un API público
+ */
 public class A {
 
     static int m = 4;
     static int n = 4;
-
+    
+    /**
+    * Este método crea una matriz bidimensional cuadrada de dimensión N
+    * @param c matriz
+    * @param n dimensión de la matriz
+    * @version 1.00
+    */
     static void crearMatriz(int[][] c, int n) {
 
         Random r = new Random();
@@ -22,6 +35,9 @@ public class A {
 
     }
 
+    /**
+    * Este método imprime por pantalla la matriz
+    */
     static void printMatriz(int[][] c, int n) {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
@@ -31,6 +47,9 @@ public class A {
         }
     }
 
+    /**
+    * Este método ordena la matriz de menor a mayor
+    */
     static void ordenarMenorMayor(int[][] a, int n) {
 
         int[] t = new int[n * n];
