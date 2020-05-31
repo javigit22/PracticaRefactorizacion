@@ -18,7 +18,7 @@ public class B {
       
         
         int m = t.length;
-        for( int i=0; i < n; i++){//ordena la matriz de abajo hacia arriba
+        for( int i=0; i < n; i++){
             for( int j=0;j< n; j++){
                 for(int x=0; x < n; x++){
                     for(int y=0; y < n; y++){

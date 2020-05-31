@@ -3,10 +3,6 @@ package RecRefactor;
 
 import java.util.Random;
 
-/**
- *
- * @author JC
- */
 public class A {
 
     static int m = 4; 
@@ -36,19 +32,15 @@ public class A {
         
         
   
-        // finding the row rs 
         for (i = 0; i < 4; ++i) { 
         for (j = 0; j < 4; ++j) { 
   
-            // Add the element 
             rs = rs + a[i][j]; 
         } 
   
-        // Print the row rs 
         System.out.println("rs "
             + i + " = " + rs); 
           
-        // Reset the rs 
         rs = 0; 
         
         }
@@ -57,19 +49,15 @@ public class A {
   
    
   
-    // finding the column cs 
     for (i = 0; i < 4; ++i) { 
         for (j = 0; j < 4; ++j) { 
   
-            // Add the element 
             cs = cs + a[j][i]; 
         } 
   
-        // Print the column cs 
         System.out.println("cs "
             + i + " = " + cs); 
   
-        // Reset the cs 
         cs = 0; 
     } 
     } 
